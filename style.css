@@ -1,9 +1,16 @@
 body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #f0e68c;
     font-family: 'Roboto', Helvetica, sans-serif;
-    background-color: antiquewhite;
     line-height: 1.6;
-    color: #333;
+    color: hsl(0, 0%, 20%);
+    height: 150vh;
+    padding: 20px;
 }
+
 @font-face {
     font-family: 'Roboto';
     src: url('fonts/Roboto-Medium.ttf') format('truetype');
@@ -12,43 +19,37 @@ body {
 }
 
 h1 {
-    text-align: center;
-    color: #3c4e67;
+    text-align: left;
+    color: rgba(60, 78, 103, 0.8);
     margin-top: 20px;
     font-size: 2.5rem;
     text-transform: uppercase;
     letter-spacing: 2px;
+    border: 2px solid red;
 }
 
-
-span {
-    display: block;
-    color: #718093;
-    font-size: 1.2rem;
-    margin-top: 10px;
-    font-style: italic;
-}
-
- p {
+p {
     margin: 20px;
     font-size: 1rem;
     color: #4b4b4b;
     line-height: 1.8;
+    border: 2px solid blue;
 }
 
-a {
-    color: #0984e3;
-    text-decoration: none;
-    transition: color 0.3s ease;
+img {
+    max-width: 50%;
+    margin: 30px;
+    border: 10px dotted #000000;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    align-self: flex-start;
+    border: 2px solid green;
 }
 
-a:hover {
-    text-decoration: underline;
-    color: #74b9ff;
-}
-
-a:active {
-    color: #d63031;
+img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 ol {
@@ -56,6 +57,10 @@ ol {
     padding-left: 40px;
     list-style: none;
     counter-reset: custom-counter;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    border: 2px solid purple;
 }
 
 ol > li {
@@ -63,6 +68,7 @@ ol > li {
     font-size: 1rem;
     counter-increment: custom-counter;
     position: relative;
+    flex-basis: 10%;
 }
 
 ol > li::before {
@@ -73,18 +79,39 @@ ol > li::before {
     left: -25px;
 }
 
-
-img {
-    display: block;
-    max-width: 90%;
-    margin: 30px auto;
-    border: 10px dotted #dfe6e9;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+.bold-text {
+    color: rgb(113, 128, 147);
+    font-size: 1.2rem;
+    margin-top: 10px;
+    font-style: italic;
 }
 
-img:hover {
-    transform: scale(1.05);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+.overlay-text {
+    background-color: hsla(0, 0%, 100%, 0.8);
+    padding: 10px;
+    z-index: 3;
+}
+
+.flex-grow-example {
+    display: flex;
+    width: 100%;
+    border: 2px solid black;
+    margin-top: 20px;
+}
+
+.flex-grow-example .item {
+    padding: 10px;
+    border: 1px solid red;
+}
+
+.flex-grow-example .item1 {
+    flex-grow: 1;
+}
+
+.flex-grow-example .item2 {
+    flex-grow: 2;
+}
+
+.flex-grow-example .item3 {
+    flex-grow: 1;
 }
