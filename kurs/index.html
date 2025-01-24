@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Прогноз погоды</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <input type="checkbox" id="accessibilityToggle" hidden>
+    <header class="header">
+        <div class="logo">
+            <a href="index.html">Погода</a>
+        </div>
+        <div class="header-sun">
+            <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 48 48" width="48px" height="48px"><path fill="#FF9800" d="M11 11H37V37H11z"/><path fill="#FF9800" d="M11.272 11.272H36.728V36.728H11.272z" transform="rotate(-45.001 24 24)"/><path fill="#FFEB3B" d="M13,24c0,6.077,4.923,11,11,11c6.076,0,11-4.923,11-11s-4.924-11-11-11C17.923,13,13,17.923,13,24"/></svg>
+        </div>
+        <nav class="nav">
+            <a href="moscow.html">Москва</a>
+            <a href="stpeterburg.html">Санкт-Петербург</a>
+            <a href="sochi.html">Сочи</a>
+        </nav>
+        <div class="header-right-group">
+            <div class="accessibility">
+                <label for="accessibilityToggle" class="accessibility-label" 
+                       role="button" 
+                       aria-label="Включить режим для слабовидящих">
+                    <span>👁️</span>
+                </label>
+            </div>
+            <div class="search">
+                <input type="text" placeholder="Поиск города...">
+            </div>
+        </div>
+    </header>
+
+    <div class="content">
+        <h1>Добро пожаловать на сайт прогноза погоды!</h1>
+        <p>Здесь вы можете узнать погоду в разных городах.</p>
+        <div class="subscribe-form">
+            <form action="/subscribe" method="POST">
+                <label for="email">Подпишитесь на нашу рассылку:</label>
+                <input type="email" id="email" name="email" placeholder="Введите ваш email" required>
+                <button type="submit">Подписаться</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="weather-container">
+        <div class="weather-now-hourly">
+            <div class="loc-now">
+                <div class="loc-now-t">
+                    <div class="loc-now-t-city">Саратов</div>
+                    <div class="loc-now-time">Сейчас <span>15:53</span></div>
+                </div>
+                <div class="loc-now-b">
+                    <div class="loc-now-temp">
+                        <div class="loc-now-temp-i">
+                            <div>-7<span>°</span></div>
+                        </div>
+                        <div class="loc-now-temp-atm">Частично облачно</div>
+                        <img src="icons/cloud/cloud.png" alt="Cloudy" class="weather-icon">
+                    </div>
+                </div>
+            </div>
+            <div class="hourly-forecast">
+                <div class="hour">
+                    <h3>12:00</h3>
+                    <img src="icons/cloud/cloud.png" alt="Cloudy" class="weather-icon">
+                    <p>-9°</p>
+                    <p>1.7 ▲</p>
+                </div>
+                <div class="hour">
+                    <h3>15:00</h3>
+                    <img src="icons/cloud/snowy.png" alt="Cloudy" class="weather-icon">
+                    <p>-8°</p>
+                    <p>1.7 ◁</p>
+                </div>
+                <div class="hour">
+                    <h3>18:00</h3>
+                    <img src="icons/cloud/snowy.png" alt="Cloudy" class="weather-icon">
+                    <p>-9°</p>
+                    <p>2.4 ◁</p>
+                </div>
+                <div class="hour">
+                    <h3>21:00</h3>
+                    <img src="icons/cloud/cloud.png" alt="Cloudy" class="weather-icon">
+                    <p>-11°</p>
+                    <p>2.6 ◁</p>
+                </div>
+                <div class="hour">
+                    <h3>00:00</h3>
+                    <img src="icons/cloud/cloud.png" alt="Cloudy" class="weather-icon">
+                    <p>-11°</p>
+                    <p>2.8 ▲</p>
+                </div>
+            </div>
+        </div>
+
+    <div class="cities-weather">
+        <h2>Погода в основных городах России</h2>
+        <div class="city-list">
+            <div class="city">
+                <span class="city-name">Москва</span>
+                <img src="icons/cloud/cloud.png" alt="Cloudy" width="48px" height="24px">
+                <span class="city-temp">-3°</span>
+            </div>
+            <div class="city">
+                <span class="city-name">Санкт-Петербург</span>
+                <img src="icons/cloud/rainy.png" alt="Cloudy" width="48px" height="24px">
+                <span class="city-temp">-3°</span>
+            </div>
+            <div class="city">
+                <span class="city-name">Новосибирск</span>
+                <img src="icons/cloud/snowy.png" alt="Cloudy" width="48px" height="24px">
+                <span class="city-temp">-11°</span>
+            </div>
+            <div class="city">
+                <span class="city-name">Екатеринбург</span>
+                <img src="icons/cloud/snowy.png" alt="Cloudy" width="48px" height="24px">
+                <span class="city-temp">-18°</span>
+            </div>
+            <div class="city">
+                <span class="city-name">Нижний Новгород</span>
+                <img src="icons/cloud/cloud.png" alt="Cloudy" width="48px" height="24px">
+                <span class="city-temp">-13°</span>
+            </div>
+            <div class="city">
+                <span class="city-name">Самара</span>
+                <img src="icons/cloud/cloud.png" alt="Cloudy" width="48px" height="24px">
+                <span class="city-temp">-14°</span>
+            </div>
+            <div class="city">
+                <span class="city-name">Омск</span>
+                <img src="icons/cloud/cloud.png" alt="Cloudy" width="48px" height="24px">
+                <span class="city-temp">-19°</span>
+            </div>
+            <div class="city">
+                <span class="city-name">Казань</span>
+                <img src="icons/cloud/snowy.png" alt="Cloudy" width="48px" height="24px">
+                <span class="city-temp">-16°</span>
+            </div>
+            <div class="city">
+                <span class="city-name">Ростов-на-Дону</span>
+                <img src="icons/cloud/cloud.png" alt="Cloudy" width="48px" height="24px">
+                <span class="city-temp">+2°</span>
+            </div>
+            <div class="city">
+                <span class="city-name">Челябинск</span>
+                <img src="icons/cloud/snowy.png" alt="Cloudy" width="48px" height="24px">
+                <span class="city-temp">-17°</span>
+            </div>
+            <div class="city">
+                <span class="city-name">Уфа</span>
+                <img src="icons/cloud/cloud.png" alt="Cloudy" width="48px" height="24px">
+                <span class="city-temp">-18°</span>
+            </div>
+            <div class="city">
+                <span class="city-name">Донецк</span>
+                <img src="icons/cloud/cloud.png" alt="Cloudy" width="48px" height="24px">
+                <span class="city-temp">+1°</span>
+            </div>
+            <div class="city">
+                <span class="city-name">Волгоград</span>
+                <img src="icons/cloud/cloud.png" alt="Cloudy" width="48px" height="24px">
+                <span class="city-temp">-2°</span>
+            </div>
+            <div class="city">
+                <span class="city-name">Пермь</span>
+                <img src="icons/cloud/cloud.png" alt="Cloudy" width="48px" height="24px">
+                <span class="city-temp">-18°</span>
+            </div>
+            <div class="city">
+                <span class="city-name">Красногорск</span>
+                <img src="icons/cloud/cloud.png" alt="Cloudy" width="48px" height="24px">
+                <span class="city-temp">-3°</span>
+            </div>
+            <div class="city">
+                <span class="city-name">Саратов</span>
+                <img src="icons/cloud/cloud.png" alt="Cloudy" width="48px" height="24px">
+                <span class="city-temp">-7°</span>
+            </div>
+            <div class="city">
+                <span class="city-name">Воронеж</span>
+                <img src="icons/cloud/cloud.png" alt="Cloudy" width="48px" height="24px">
+                <span class="city-temp">-2°</span>
+            </div>
+            <div class="city">
+                <span class="city-name">Запорожье</span>
+                <img src="icons/cloud/cloud.png" alt="Cloudy" width="48px" height="24px">
+                <span class="city-temp">+4°</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="popular-cities">
+        <h2>Погода в популярных городах и курортах</h2>
+        <div class="city-list">
+            <div class="city">
+                <span class="city-name">Аланья</span>
+                <img src="icons/cloud/cloud.png" alt="Cloudy" width="48px" height="24px">
+                <span class="city-temp">+14°</span>
+            </div>
+            <div class="city">
+                <span class="city-name">Вильнюс</span>
+                <img src="icons/cloud/cloud.png" alt="Cloudy" width="48px" height="24px">
+                <span class="city-temp">0°</span>
+            </div>
+            <div class="city">
+                <span class="city-name">Амстердам</span>
+                <img src="icons/cloud/rainy.png" alt="Cloudy" width="48px" height="24px">
+                <span class="city-temp">+1°</span>
+            </div>
+            <div class="city">
+                <span class="city-name">Гоа</span>
+                <img src="icons/sun/sunny.png" alt="Cloudy" width="48px" height="24px">
+                <span class="city-temp">+34°</span>
+            </div>
+            <div class="city">
+                <span class="city-name">Анталья</span>
+                <img src="icons/sun/sunny.png" alt="Cloudy" width="48px" height="24px">
+                <span class="city-temp">+11°</span>
+            </div>
+            <div class="city">
+                <span class="city-name">Дубай</span>
+                <img src="icons/sun/sunny.png" alt="Cloudy" width="48px" height="24px">
+                <span class="city-temp">+23°</span>
+            </div>
+            <div class="city">
+                <span class="city-name">Бангкок</span>
+                <img src="icons/sun/sunny.png" alt="Cloudy" width="48px" height="24px">
+                <span class="city-temp">+34°</span>
+            </div>
+            <div class="city">
+                <span class="city-name">Ибица</span>
+                <img src="icons/sun/sunny.png" alt="Cloudy" width="48px" height="24px">
+                <span class="city-temp">+16°</span>
+            </div>
+            <div class="city">
+                <span class="city-name">Барселона</span>
+                <img src="icons/cloud/cloud.png" alt="Cloudy" width="48px" height="24px">
+                <span class="city-temp">+12°</span>
+            </div>
+            <div class="city">
+                <span class="city-name">Кемер</span>
+                <img src="icons/cloud/cloud.png" alt="Cloudy" width="48px" height="24px">
+                <span class="city-temp">+12°</span>
+            </div>
+            <div class="city">
+                <span class="city-name">Белек</span>
+                <img src="icons/cloud/cloud.png" alt="Cloudy" width="48px" height="24px">
+                <span class="city-temp">+12°</span>
+            </div>
+            <div class="city">
+                <span class="city-name">Керкира</span>
+                <img src="icons/cloud/cloud.png" alt="Cloudy" width="48px" height="24px">
+                <span class="city-temp">+13°</span>
+            </div>
+            <div class="city">
+                <span class="city-name">Бодрум</span>
+                <img src="icons/cloud/cloud.png" alt="Cloudy" width="48px" height="24px">
+                <span class="city-temp">+15°</span>
+            </div>
+            <div class="city">
+                <span class="city-name">Лимассол</span>
+                <img src="icons/cloud/cloud.png" alt="Cloudy" width="48px" height="24px">
+                <span class="city-temp">+17°</span>
+            </div>
+            <div class="city">
+                <span class="city-name">Будва</span>
+                <img src="icons/cloud/cloud.png" alt="Cloudy" width="48px" height="24px">
+                <span class="city-temp">+11°</span>
+            </div>
+            <div class="city">
+                <span class="city-name">Лондон</span>
+                <img src="icons/cloud/cloud.png" alt="Cloudy" width="48px" height="24px">
+                <span class="city-temp">+3°</span>
+            </div>
+            <div class="city">
+                <span class="city-name">Бургас</span>
+                <img src="icons/cloud/cloud.png" alt="Cloudy" width="48px" height="24px">
+                <span class="city-temp">+5°</span>
+            </div>
+            <div class="city">
+                <span class="city-name">Мадрид</span>
+                <img src="icons/sun/sunny.png" alt="Cloudy" width="48px" height="24px">
+                <span class="city-temp">+10°</span>
+            </div>
+            <div class="city">
+                <span class="city-name">Вена</span>
+                <img src="icons/cloud/cloud.png" alt="Cloudy" width="48px" height="24px">
+                <span class="city-temp">-1°</span>
+            </div>
+            <div class="city">
+                <span class="city-name">Париж</span>
+                <img src="icons/cloud/cloud.png" alt="Cloudy" width="48px" height="24px">
+                <span class="city-temp">+5°</span>
+            </div>
+            <div class="city">
+                <span class="city-name">Венеция</span>
+                <img src="icons/sun/cloudy.png" alt="Cloudy" width="48px" height="24px">
+                <span class="city-temp">+8°</span>
+            </div>
+            <div class="city">
+                <span class="city-name">Паттайя</span>
+                <img src="icons/sun/sunny.png" alt="Cloudy" width="48px" height="24px">
+                <span class="city-temp">+30°</span>
+            </div>
+            <div class="city">
+                <span class="city-name">Прага</span>
+                <img src="icons/cloud/cloud.png" alt="Cloudy" width="48px" height="24px">
+                <span class="city-temp">-2°</span>
+            </div>
+            <div class="city">
+                <span class="city-name">Пхукет</span>
+                <img src="icons/sun/sunny.png" alt="Cloudy" width="48px" height="24px">
+                <span class="city-temp">+34°</span>
+            </div>
+            <div class="city">
+                <span class="city-name">Рим</span>
+                <img src="icons/sun/sunny.png" alt="Cloudy" width="48px" height="24px">
+                <span class="city-temp">+8°</span>
+            </div>
+            <div class="city">
+                <span class="city-name">Римини</span>
+                <img src="icons/sun/sunny.png" alt="Cloudy" width="48px" height="24px">
+                <span class="city-temp">+7°</span>
+            </div>
+            <div class="city">
+                <span class="city-name">Ровинь</span>
+                <img src="icons/cloud/cloud.png" alt="Cloudy" width="48px" height="24px">
+                <span class="city-temp">+9°</span>
+            </div>
+            <div class="city">
+                <span class="city-name">Родос</span>
+                <img src="icons/sun/cloudy.png" alt="Cloudy" width="48px" height="24px">
+                <span class="city-temp">+16°</span>
+            </div>
+            <div class="city">
+                <span class="city-name">Стамбул</span>
+                <img src="icons/sun/cloudy.png" alt="Cloudy" width="48px" height="24px">
+                <span class="city-temp">+11°</span>
+            </div>
+            <div class="city">
+                <span class="city-name">Тенерифе</span>
+                <img src="icons/sun/sunny.png" alt="Cloudy" width="48px" height="24px">
+                <span class="city-temp">+18°</span>
+            </div>
+            <div class="city">
+                <span class="city-name">Хургада</span>
+                <img src="icons/sun/sunny.png" alt="Cloudy" width="48px" height="24px">
+                <span class="city-temp">+23°</span>
+            </div>
+            <div class="city">
+                <span class="city-name">Шарм-эль-Шейх</span>
+                <img src="icons/sun/sunny.png" alt="Cloudy" width="48px" height="24px">
+                <span class="city-temp">+23°</span>
+            </div>
+            <div class="city">
+                <span class="city-name">Эйлат</span>
+                <img src="icons/sun/sunny.png" alt="Cloudy" width="48px" height="24px">
+                <span class="city-temp">+16°</span>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="copyright">
+            © 2025 «Прогноз погоды». Все права защищены.
+        </div>
+        <div class="about">
+            <a href="site.html">О сайте</a>
+        </div>
+    </footer>
+</body>
+</html>

@@ -5,8 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>О проекте</title>
     <link rel="stylesheet" href="style.css">
+    <style>.footer{position: fixed;bottom: 0;width: 97%;}</style>
 </head>
 <body>
+    <input type="checkbox" id="accessibilityToggle" hidden>
     <header class="header">
         <div class="logo">
             <a href="index.html">Погода</a>
@@ -18,8 +20,17 @@
             <a href="sochi.html">Сочи</a>
         </nav>
 
-        <div class="search">
-            <input type="text" placeholder="Поиск города...">
+        <div class="header-right-group">
+            <div class="accessibility">
+                <label for="accessibilityToggle" class="accessibility-label" 
+                       role="button" 
+                       aria-label="Включить режим для слабовидящих">
+                    <span>👁️</span>
+                </label>
+            </div>
+            <div class="search">
+                <input type="text" placeholder="Поиск города...">
+            </div>
         </div>
     </header>
     <main class="about-content">
@@ -36,6 +47,7 @@
             <li>Удобный и понятный интерфейс.</li>
             <li>Поддержка множества городов.</li>
         </ul>
+        <p>При планировании не стоит забывать, что прогнозы погоды не оправдываются на 100%, а лишь имеют некую вероятность, например, прогноз на 3 дня – вероятность 75-90%.</p>
     </main>
     <footer class="footer">
         <div class="copyright">

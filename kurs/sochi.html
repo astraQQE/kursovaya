@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Прогноз погоды в Сочи</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="city.css">
+</head>
+<body>
+  <input type="checkbox" id="accessibilityToggle" hidden>
+    <header class="header">
+        <div class="logo">
+            <a href="index.html">Погода</a>
+        </div>
+        <nav class="nav">
+            <a href="moscow.html">Москва</a>
+            <a href="stpeterburg.html">Санкт-Петербург</a>
+            <a href="sochi.html">Сочи</a>
+        </nav>
+        <div class="header-right-group">
+          <div class="accessibility">
+              <label for="accessibilityToggle" class="accessibility-label" 
+                     role="button" 
+                     aria-label="Включить режим для слабовидящих">
+                  <span>👁️</span>
+              </label>
+          </div>
+          <div class="search">
+              <input type="text" placeholder="Поиск города...">
+          </div>
+      </div>
+    </header>
+
+    <div class="pgname"><span>Погода в Сочи</span></div>
+
+    <div class="weather-main">
+        <div class="last-report">
+            <div class="current-temp">
+                <div class="temp-block">
+                    <span class="temp">+12°</span>
+                    <span class="apparent">Ощущается как +11°</span>
+                </div>
+                
+                <ul class="weather-conditions">
+                    <li class="condition-descr">Незначительная облачность</li>
+                    <li>Ветер: <span class="weather-value">2 м/с, западный</span></li>
+                    <li>Давление: <span class="weather-value">761 мм рт.ст.</span></li>
+                    <li>Влажность воздуха: <span class="weather-value">47%</span></li>
+                </ul>
+            </div>
+
+            <div class="ext forecast">
+                <ul>
+                    <li class="ext-item">
+                        <div class="ext-wrap">
+                            <span class="ext-time">Днём</span>
+                            <div class="icon-temp">
+                                <img src="icons/sun/sunny.png" alt="Sunny" class="weather-icon">
+                                <span class="ext-cond">+14°</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="ext-item">
+                        <div class="ext-wrap">
+                            <span class="ext-time">Вечером</span>
+                            <div class="icon-temp">
+                                <img src="icons/sun/sunny.png" alt="Sunny" class="weather-icon">
+                                <span class="ext-cond">+7°</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="ext-item">
+                        <div class="ext-wrap">
+                            <span class="ext-time">Ночью</span>
+                            <div class="icon-temp">
+                                <img src="icons/moon/cloud.png" alt="Moon" class="weather-icon">
+                                <span class="ext-cond">+8°</span>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <img src="sochi.jpg" alt="Сочи" class="city-photo">
+    </div>
+
+
+    <h1 class="weather-header">Погода в Сочи</h1>
+<div class="weather-container">
+  <!-- Повторяющийся блок для каждого дня -->
+  <div class="weather-card">
+    <div class="weather-header">
+      <div class="day-abbr" title="Среда">ср</div>
+      <div class="date">22 Янв</div>
+    </div>
+    
+    <div class="temperature">
+      <div class="day-temp">
+        <span class="icon">☀️</span>
+        <span class="value">+14°</span>
+      </div>
+      <div class="night-temp">
+        <span class="icon">🌙</span>
+        <span class="value">+8°</span>
+      </div>
+    </div>
+
+    <div class="weather-status">
+      <span class="icon">⛅</span>
+      Переменная облачность
+    </div>
+
+    <div class="weather-details">
+      <div class="detail-item">
+        <span class="icon">🌬️</span>
+        <span class="label">Ветер</span>
+        <span class="value">З 3 м/с</span>
+      </div>
+      <div class="detail-item">
+        <span class="icon">📉</span>
+        <span class="label">Давление</span>
+        <span class="value">761 мм</span>
+      </div>
+      <div class="detail-item">
+        <span class="icon">💧</span>
+        <span class="label">Влажность</span>
+        <span class="value">62%</span>
+      </div>
+    </div>
+  </div>
+  <div class="weather-card">
+    <div class="weather-header">
+      <div class="day-abbr" title="Вторник">вт</div>
+      <div class="date">23 Янв</div>
+    </div>
+    
+    <div class="temperature">
+      <div class="day-temp">
+        <span class="icon">☀️</span>
+        <span class="value">+14°</span>
+      </div>
+      <div class="night-temp">
+        <span class="icon">🌙</span>
+        <span class="value">+8°</span>
+      </div>
+    </div>
+
+    <div class="weather-status">
+      <span class="icon">⛅</span>
+      Переменная облачность
+    </div>
+
+    <div class="weather-details">
+      <div class="detail-item">
+        <span class="icon">🌬️</span>
+        <span class="label">Ветер</span>
+        <span class="value">З 3 м/с</span>
+      </div>
+      <div class="detail-item">
+        <span class="icon">📉</span>
+        <span class="label">Давление</span>
+        <span class="value">761 мм</span>
+      </div>
+      <div class="detail-item">
+        <span class="icon">💧</span>
+        <span class="label">Влажность</span>
+        <span class="value">62%</span>
+      </div>
+    </div>
+  </div>
+  <div class="weather-card">
+    <div class="weather-header">
+      <div class="day-abbr" title="Четверг">чт</div>
+      <div class="date">24 Янв</div>
+    </div>
+    
+    <div class="temperature">
+      <div class="day-temp">
+        <span class="icon">☀️</span>
+        <span class="value">+14°</span>
+      </div>
+      <div class="night-temp">
+        <span class="icon">🌙</span>
+        <span class="value">+8°</span>
+      </div>
+    </div>
+
+    <div class="weather-status">
+      <span class="icon">⛅</span>
+      Переменная облачность
+    </div>
+
+    <div class="weather-details">
+      <div class="detail-item">
+        <span class="icon">🌬️</span>
+        <span class="label">Ветер</span>
+        <span class="value">З 3 м/с</span>
+      </div>
+      <div class="detail-item">
+        <span class="icon">📉</span>
+        <span class="label">Давление</span>
+        <span class="value">761 мм</span>
+      </div>
+      <div class="detail-item">
+        <span class="icon">💧</span>
+        <span class="label">Влажность</span>
+        <span class="value">62%</span>
+      </div>
+    </div>
+  </div>
+  <div class="weather-card">
+    <div class="weather-header">
+      <div class="day-abbr" title="Пятница">пт</div>
+      <div class="date">25 Янв</div>
+    </div>
+    
+    <div class="temperature">
+      <div class="day-temp">
+        <span class="icon">☀️</span>
+        <span class="value">+14°</span>
+      </div>
+      <div class="night-temp">
+        <span class="icon">🌙</span>
+        <span class="value">+8°</span>
+      </div>
+    </div>
+
+    <div class="weather-status">
+      <span class="icon">⛅</span>
+      Переменная облачность
+    </div>
+
+    <div class="weather-details">
+      <div class="detail-item">
+        <span class="icon">🌬️</span>
+        <span class="label">Ветер</span>
+        <span class="value">З 3 м/с</span>
+      </div>
+      <div class="detail-item">
+        <span class="icon">📉</span>
+        <span class="label">Давление</span>
+        <span class="value">761 мм</span>
+      </div>
+      <div class="detail-item">
+        <span class="icon">💧</span>
+        <span class="label">Влажность</span>
+        <span class="value">62%</span>
+      </div>
+    </div>
+  </div>
+  <div class="weather-card">
+    <div class="weather-header">
+      <div class="day-abbr" title="Суббота">сб</div>
+      <div class="date">26 Янв</div>
+    </div>
+    
+    <div class="temperature">
+      <div class="day-temp">
+        <span class="icon">☀️</span>
+        <span class="value">+14°</span>
+      </div>
+      <div class="night-temp">
+        <span class="icon">🌙</span>
+        <span class="value">+8°</span>
+      </div>
+    </div>
+
+    <div class="weather-status">
+      <span class="icon">⛅</span>
+      Переменная облачность
+    </div>
+
+    <div class="weather-details">
+      <div class="detail-item">
+        <span class="icon">🌬️</span>
+        <span class="label">Ветер</span>
+        <span class="value">З 3 м/с</span>
+      </div>
+      <div class="detail-item">
+        <span class="icon">📉</span>
+        <span class="label">Давление</span>
+        <span class="value">761 мм</span>
+      </div>
+      <div class="detail-item">
+        <span class="icon">💧</span>
+        <span class="label">Влажность</span>
+        <span class="value">62%</span>
+      </div>
+    </div>
+  </div>
+  <div class="weather-card">
+    <div class="weather-header">
+      <div class="day-abbr" title="Воскресенье">вск</div>
+      <div class="date">27 Янв</div>
+    </div>
+    
+    <div class="temperature">
+      <div class="day-temp">
+        <span class="icon">☀️</span>
+        <span class="value">+14°</span>
+      </div>
+      <div class="night-temp">
+        <span class="icon">🌙</span>
+        <span class="value">+8°</span>
+      </div>
+    </div>
+
+    <div class="weather-status">
+      <span class="icon">⛅</span>
+      Переменная облачность
+    </div>
+
+    <div class="weather-details">
+      <div class="detail-item">
+        <span class="icon">🌬️</span>
+        <span class="label">Ветер</span>
+        <span class="value">З 3 м/с</span>
+      </div>
+      <div class="detail-item">
+        <span class="icon">📉</span>
+        <span class="label">Давление</span>
+        <span class="value">761 мм</span>
+      </div>
+      <div class="detail-item">
+        <span class="icon">💧</span>
+        <span class="label">Влажность</span>
+        <span class="value">62%</span>
+      </div>
+    </div>
+  </div>
+  <div class="weather-card">
+    <div class="weather-header">
+      <div class="day-abbr" title="Понедельник">пн</div>
+      <div class="date">28 Янв</div>
+    </div>
+    
+    <div class="temperature">
+      <div class="day-temp">
+        <span class="icon">☀️</span>
+        <span class="value">+14°</span>
+      </div>
+      <div class="night-temp">
+        <span class="icon">🌙</span>
+        <span class="value">+8°</span>
+      </div>
+    </div>
+
+    <div class="weather-status">
+      <span class="icon">⛅</span>
+      Переменная облачность
+    </div>
+
+    <div class="weather-details">
+      <div class="detail-item">
+        <span class="icon">🌬️</span>
+        <span class="label">Ветер</span>
+        <span class="value">З 3 м/с</span>
+      </div>
+      <div class="detail-item">
+        <span class="icon">📉</span>
+        <span class="label">Давление</span>
+        <span class="value">761 мм</span>
+      </div>
+      <div class="detail-item">
+        <span class="icon">💧</span>
+        <span class="label">Влажность</span>
+        <span class="value">62%</span>
+      </div>
+    </div>
+  </div>
+</div>
+<footer class="footer">
+    <div class="copyright">
+        © 2025 «Прогноз погоды». Все права защищены.
+    </div>
+    <div class="about">
+        <a href="site.html">О сайте</a>
+    </div>
+</footer>
+</body>
+</html>
